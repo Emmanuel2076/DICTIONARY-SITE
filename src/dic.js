@@ -26,20 +26,12 @@ function wordinput() {
       let MyResult
        = (document.querySelector(
         ".description"
-      ).innerHTML = `  <div 
-
-      <div class="hero">
-      <p class="WORD">${inputElement.toLowerCase()}</p>
-      </div>
-      <div class="hero">
-      <i><p class="symbol">${data[0].phonetics[1].text}</p></i>
-      <i><p class="symbol  part">/${data[0].meanings[0].partOfSpeech}/</p></i>
-      </div>
-      
-      <p class="meaning">
-      ${data[0].meanings[1].definitions[0].definition}
-      </p>
-      </div> 
+      ).innerHTML = `  <div class="description" class="px-4 py-5 my-5 text-center">
+      <div class="px-4 pt-5 my-5 text-center border-bottom">
+        <h1 class="display-4 fw-bold text-body-emphasis">${inputElement.toLowerCase()}</h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="lead mb-4"> ${data[0].meanings[1].definitions[0].definition}</p>
+        </div>
 `);
     })
     .catch(() => {
